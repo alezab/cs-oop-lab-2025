@@ -18,5 +18,15 @@ public class Segment {
         return Math.sqrt(Math.pow(point_b.x - point_a.x, 2) + Math.pow(point_b.y - point_a.y, 2));
     }
 
+    public static Segment getLongestSegment(Segment[] segments){
+        Segment longestSegment = segments[0];
+        for (Segment segment : segments) {
+            if (Segment.length(segment.point_a, segment.point_b) > Segment.length(longestSegment.point_a, longestSegment.point_b)) {
+                longestSegment = segment;
+            }
+        }
+        return longestSegment;
+    }
+
 
 }
