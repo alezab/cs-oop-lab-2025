@@ -24,9 +24,25 @@ public class Point {
     W klasie Point stwórz bezargumentową metodę toSvg(), która zwróci informację o punkcie sformatowaną tak,
     aby można ją było wyświetlić w formacie SVG za pomocą niewielkiego okręgu.
     */
-
     public String toSvg() {
         return "<circle r=\"5\" cx=\"" + x + "\" cy=\"" + y + "\"/>";
+    }
+
+    /*
+    Zadanie 3.
+    Napisz publiczną metodę translate(), która przyjmie dwie współrzędne dx i dy i
+    przesunie o te wartości pozycję punktu.
+    Napisz publiczną metodę translated(), która przyjmie dwie współrzędne dx i dy, a następnie utworzy nowy punkt,
+    który będzie przesunięty o te wartości w stosunku do pozycji oryginalnego punktu.
+     */
+
+    public void translate(double dx, double dy) {
+        x += dx;
+        y += dy;
+    }
+
+    public Point translated(double dx, double dy) {
+        return new Point(x + dx, y + dy);
     }
 
 }
