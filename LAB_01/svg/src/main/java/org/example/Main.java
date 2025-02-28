@@ -12,5 +12,7 @@ public class Main {
 
         Point point2 = point.translated(2.0, 5.0);
         System.out.println(point2.toSvg());
+
+        System.out.println(Segment.length(point, point2));
     }
 }
