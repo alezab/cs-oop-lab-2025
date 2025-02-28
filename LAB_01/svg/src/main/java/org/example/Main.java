@@ -5,6 +5,6 @@ public class Main {
         Point point = new Point(2.0, 3.0);
 
         System.out.println(point.toString());
-
+        System.out.println(point.toSvg());
     }
 }

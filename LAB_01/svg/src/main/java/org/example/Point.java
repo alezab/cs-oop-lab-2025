@@ -18,4 +18,15 @@ public class Point {
     public String toString() {
         return "Point_x: " + x + ", Point_y: " + y;
     }
+
+    /*
+    Zadanie 2.
+    W klasie Point stwórz bezargumentową metodę toSvg(), która zwróci informację o punkcie sformatowaną tak,
+    aby można ją było wyświetlić w formacie SVG za pomocą niewielkiego okręgu.
+    */
+
+    public String toSvg() {
+        return "<circle r=\"5\" cx=\"" + x + "\" cy=\"" + y + "\"/>";
+    }
+
 }
