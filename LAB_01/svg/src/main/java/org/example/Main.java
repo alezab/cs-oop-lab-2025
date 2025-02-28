@@ -13,7 +13,7 @@ public class Main {
         Point point2 = point.translated(2.0, 5.0);
         System.out.println(point2.toSvg());
 
-        System.out.println(Segment.length(point, point2));
+        //System.out.println(Segment.length(point, point2));
 
         Segment[] segments = new Segment[3];
         segments[0] = new Segment(new Point(0.0, 0.0), new Point(3.0, 4.0));
@@ -24,7 +24,7 @@ public class Main {
         //System.out.println(Segment.length(longestSegment.point_a, longestSegment.point_b));
 
         Segment longestSegment = Segment.getLongestSegment(segments);
-        System.out.println(Segment.length(longestSegment.point_a, longestSegment.point_b));
+        System.out.println(longestSegment.length());
     }
 
     /*
