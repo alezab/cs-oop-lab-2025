@@ -52,7 +52,7 @@ public class Point {
     }
 
     public String toString() {
-        return "Point_x: " + x + ", Point_y: " + y;
+        return "P_x: " + x + ", P_y: " + y;
     }
 
     /*

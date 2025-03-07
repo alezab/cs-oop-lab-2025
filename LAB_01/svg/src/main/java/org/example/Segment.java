@@ -37,6 +37,7 @@ public class Segment {
         return longestSegment;
     }
 
+    @Override
     public String toString() {
         return "Segment: " + "Punkt A: " + point_a.toString() + ", Punkt B: " + point_b.toString();
     }

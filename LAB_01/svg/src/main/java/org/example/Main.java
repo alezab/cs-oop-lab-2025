@@ -28,6 +28,7 @@ public class Main {
 
         Point pointA = new Point(0.0, 0.0);
         Point pointB = new Point(3.0, 4.0);
+
         Segment testSegment = new Segment(pointA, pointB);
         System.out.println("Odcinek przed zmianą: " + testSegment.toString());
 
@@ -37,6 +38,16 @@ public class Main {
         pointB.setX(4.0);
         pointB.setY(5.0);
         System.out.println("Odcinek po zmianie: " + testSegment.toString());
+
+        Point[] points = new Point[4];
+        points[0] = new Point(0.0, 0.0);
+        points[1] = new Point(3.0, 0.0);
+        points[2] = new Point(4.0, 0.0);
+        points[3] = new Point(5.0, 0.0);
+        Polygon polygon = new Polygon(points);
+
+        System.out.println(polygon.toString());
+        System.out.println(polygon.toSvg());
 
 
     }
