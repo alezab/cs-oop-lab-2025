@@ -24,6 +24,12 @@ public class Point {
         this.y = y;
     }
 
+    // Konstruktor kopiujący
+    public Point(Point point) {
+        this.x = point.x;
+        this.y = point.y;
+    }
+
     public Point() {
         this.x = 0;
         this.y = 0;

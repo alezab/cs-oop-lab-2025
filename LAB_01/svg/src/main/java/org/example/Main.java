@@ -25,6 +25,20 @@ public class Main {
 
         Segment longestSegment = Segment.getLongestSegment(segments);
         System.out.println(longestSegment.length());
+
+        Point pointA = new Point(0.0, 0.0);
+        Point pointB = new Point(3.0, 4.0);
+        Segment testSegment = new Segment(pointA, pointB);
+        System.out.println("Odcinek przed zmianą: " + testSegment.toString());
+
+        // Zmiana punktów
+        pointA.setX(1.0);
+        pointA.setY(1.0);
+        pointB.setX(4.0);
+        pointB.setY(5.0);
+        System.out.println("Odcinek po zmianie: " + testSegment.toString());
+
+
     }
 
     /*
