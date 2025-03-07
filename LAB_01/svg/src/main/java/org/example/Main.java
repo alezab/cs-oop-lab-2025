@@ -62,16 +62,16 @@ public class Main {
         System.out.println("Polygon po zmianie:");
         System.out.println(polygon.toString());
         System.out.println(polygon.toSvg());
+        System.out.println();
 
         //Polygon copyPolygon = new Polygon(polygon);
         //System.out.println(copyPolygon.toString());
 
         SvgScene svgScene = new SvgScene();
         svgScene.addPolygon(polygon);
-        svgScene.addPolygon(polygon);
-        svgScene.addPolygon(polygon);
 
-        System.out.println(svgScene.getPolygons()[0]);
+
+        System.out.println(svgScene.toSvg());
 
 
     }

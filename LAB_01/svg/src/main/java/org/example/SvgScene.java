@@ -35,4 +35,21 @@ public class SvgScene {
         return polygons;
     }
 
+    /*
+    Zadanie 6.
+    W klasie SvgScene napisz metodę toSvg(), która zwróci napis utworzony
+    z napisów zwracanych przez toSvg() wszystkich wielokątów z tablicy.
+     */
+    public String toSvg() {
+        StringBuilder svg = new StringBuilder();
+        svg.append("<svg>\n");
+        for (Polygon polygon : polygons) {
+            if (polygon == null) continue;
+            svg.append(polygon.toSvg()).append("\n");
+        }
+        svg.append("</svg>");
+        return svg.toString();
+    }
+
+
 }
