@@ -51,5 +51,20 @@ public class SvgScene {
         return svg.toString();
     }
 
+    public BoundingBox boundingBox() {
+        double minX = Double.MAX_VALUE, minY = Double.MAX_VALUE;
+        double maxX = -Double.MAX_VALUE, maxY = -Double.MAX_VALUE;
+        for (Polygon polygon : polygons) {
+            if (polygon == null) continue;
+            for (Point point : polygon.getPoints()) {
+                minX = Math.min(minX, point.getX());
+                minY = Math.min(minY, point.getY());
+                maxX = Math.max(maxX, point.getX());
+                maxY = Math.max(maxY, point.getY());
+            }
+        }
+        return new BoundingBox(minX, minY, maxX - minX, maxY - minY);
+    }
+
 
 }
