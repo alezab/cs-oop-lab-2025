@@ -46,11 +46,25 @@ public class Main {
         points[3] = new Point(5.0, 0.0);
         Polygon polygon = new Polygon(points);
 
+
+        System.out.println("Polygon przed zmianą:");
+        System.out.println(polygon.toString());
+        System.out.println(polygon.toSvg());
+        System.out.println();
+        points[0].setX(1.0);
+        points[0].setY(1.0);
+        points[1].setX(1.0);
+        points[1].setY(1.0);
+        points[2].setX(1.0);
+        points[2].setY(1.0);
+        points[3].setX(1.0);
+        points[3].setY(1.0);
+        System.out.println("Polygon po zmianie:");
         System.out.println(polygon.toString());
         System.out.println(polygon.toSvg());
 
-        Polygon copyPolygon = new Polygon(polygon);
-        System.out.println(copyPolygon.toString());
+        //Polygon copyPolygon = new Polygon(polygon);
+        //System.out.println(copyPolygon.toString());
 
 
     }

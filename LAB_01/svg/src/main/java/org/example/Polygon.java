@@ -17,6 +17,13 @@ W klasie Polygon napisz konstruktor kopiujący, który wykonuje płytką kopię 
 Następnie zmodyfikuj go tak, aby wykonywał głęboką kopię.
 */
 
+/*
+Zadanie 5/L02
+Zdefiniuj klasę SvgScene. Klasa powinna posiadać prywatną tablicę 3 referencji do obiektów Polygon.
+Napisz funkcję addPolygon(), która doda przekazaną referencję na obiekt Polygon do tablicy.
+Jeżeli miejsce się wyczerpie, powinna zacząć nadpisywać wielokąty od początku.
+ */
+
 
 public class Polygon {
     private Point[] points;
@@ -28,14 +35,6 @@ public class Polygon {
         }
     }
 
-    // Płytka kopia
-    /*
-    public Polygon(Polygon polygon) {
-        this.points = polygon.points;
-    }
-    */
-
-    // Głęboka kopia
     public Polygon(Polygon polygon) {
         this.points = new Point[polygon.points.length];
         for (int i = 0; i < polygon.points.length; i++) {
