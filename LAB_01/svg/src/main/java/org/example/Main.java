@@ -49,6 +49,9 @@ public class Main {
         System.out.println(polygon.toString());
         System.out.println(polygon.toSvg());
 
+        Polygon copyPolygon = new Polygon(polygon);
+        System.out.println(copyPolygon.toString());
+
 
     }
 

@@ -9,11 +9,38 @@ Stwórz publiczne metody:
 - toSvg(), która zwróci opis wielokąta w postaci odpowiednio sparametryzowanego znacznika <polygon>.
  */
 
+/*
+Zadanie 4/L02
+Zmodyfikuj konstruktor klasy Polygon tak, aby ustawiał w polu obiektu kopię tablicy przekazanej jako argument.
+Następnie zmodyfikuj go tak, aby tworzył nową tablicę zapełnioną kopiami obiektów Point z oryginalnej tablicy.
+W klasie Polygon napisz konstruktor kopiujący, który wykonuje płytką kopię obiektu.
+Następnie zmodyfikuj go tak, aby wykonywał głęboką kopię.
+*/
+
+
 public class Polygon {
     private Point[] points;
 
     public Polygon(Point[] points) {
-        this.points = points;
+        this.points = new Point[points.length];
+        for (int i = 0; i < points.length; i++) {
+            this.points[i] = new Point(points[i]);
+        }
+    }
+
+    // Płytka kopia
+    /*
+    public Polygon(Polygon polygon) {
+        this.points = polygon.points;
+    }
+    */
+
+    // Głęboka kopia
+    public Polygon(Polygon polygon) {
+        this.points = new Point[polygon.points.length];
+        for (int i = 0; i < polygon.points.length; i++) {
+            this.points[i] = new Point(polygon.points[i]);
+        }
     }
 
     @Override
