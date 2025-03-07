@@ -15,7 +15,7 @@ public class Segment {
     }
 
     public double length() {
-        return Math.sqrt(Math.pow(point_b.x - point_a.x, 2) + Math.pow(point_b.y - point_a.y, 2));
+        return Math.sqrt(Math.pow(point_b.getX() - point_a.getX(), 2) + Math.pow(point_b.getY() - point_a.getY(), 2));
     }
 
     public static Segment getLongestSegment(Segment[] segments){
