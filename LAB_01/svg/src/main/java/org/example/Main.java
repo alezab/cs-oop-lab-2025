@@ -66,24 +66,14 @@ public class Main {
         //Polygon copyPolygon = new Polygon(polygon);
         //System.out.println(copyPolygon.toString());
 
+        SvgScene svgScene = new SvgScene();
+        svgScene.addPolygon(polygon);
+        svgScene.addPolygon(polygon);
+        svgScene.addPolygon(polygon);
+
+        System.out.println(svgScene.getPolygons()[0]);
+
 
     }
 
-    /*
-    Zadanie 5.
-    W klasie Main napisz metodę statyczną, która przyjmie tablicę obiektów Segment i zwróci najdłuższy segment.
-    Następnie przenieś tę metodę do klasy Segment.
-    */
-/*
-    public static Segment getLongestSegment(Segment[] segments){
-        Segment longestSegment = segments[0];
-        for (Segment segment : segments) {
-            if (Segment.length(segment.point_a, segment.point_b) > Segment.length(longestSegment.point_a, longestSegment.point_b)) {
-                longestSegment = segment;
-            }
-        }
-        return longestSegment;
-    }
-
- */
 }
